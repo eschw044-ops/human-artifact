@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Technology Changes Who We Trust</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f1eb;
+      color: #222;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: #ffffff;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      max-width: 750px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 26px;
+    }
+
+    .short {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .details {
+      display: none;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ccc;
+      line-height: 1.6;
+    }
+
+    .details.show {
+      display: block;
+    }
+
+    .question {
+      margin-top: 50px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>When Technology Changes Who We Trust</h1>
+    <p class="subtitle">
+      From the printing press to the internet to generative AI, new technologies have changed
+      how people create, share, and trust information.
+    </p>
+  </header>
+
+  <div class="container">
+
+    <p class="intro">
+      Each of these technologies made information easier to access, but each one also created
+      new questions about authority, credibility, and who gets to shape what people believe.
+      Click each section to explore what changed.
+    </p>
+
+    <div class="cards">
+
+      <div class="card" onclick="toggleDetails(this)">
+        <h2>Printing Press</h2>
+        <p class="short">
+          Information could be copied and spread much faster than handwritten texts.
+        </p>
+
+        <div class="details">
+          <p><strong>What changed:</strong> Books and written ideas became easier to reproduce and distribute.</p>
+          <p><strong>What became easier:</strong> More people could access religious, scientific, and political ideas.</p>
+          <p><strong>New challenge:</strong> More information also meant more disagreement about which sources should be trusted.</p>
+          <p><strong>Who gained power:</strong> Writers, printers, and readers had more influence over how ideas spread.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleDetails(this)">
+        <h2>The Internet</h2>
+        <p class="short">
+          Information became almost instant and nearly anyone could publish it.
+        </p>
+
+        <div class="details">
+          <p><strong>What changed:</strong> Information could travel across the world almost immediately.</p>
+          <p><strong>What became easier:</strong> People could search for information, communicate, and publish their own ideas.</p>
+          <p><strong>New challenge:</strong> Misinformation could spread just as quickly as accurate information.</p>
+          <p><strong>Who gained power:</strong> Everyday users could become creators, publishers, and influencers.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="toggleDetails(this)">
+        <h2>Generative AI</h2>
+        <p class="short">
+          Technology can now help create information, not just store or spread it.
+        </p>
+
+        <div class="details">
+          <p><strong>What changed:</strong> AI can generate writing, explanations, images, and ideas in seconds.</p>
+          <p><strong>What became easier:</strong> People can organize ideas, learn faster, and get help with difficult tasks.</p>
+          <p><strong>New challenge:</strong> It can be harder to know where information came from or whether it is accurate.</p>
+          <p><strong>Who gains power:</strong> People have powerful tools, but they also have more responsibility to question what they receive.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="question">
+      <strong>The bigger question:</strong><br><br>
+      As technology makes information easier to create and access, does human judgment become
+      more important instead of less?
+    </div>
+
+  </div>
+
+  <footer>
+    Created for IDH 3034 Honors Seminar
+  </footer>
+
+  <script>
+    function toggleDetails(card) {
+      const details = card.querySelector('.details');
+      details.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
